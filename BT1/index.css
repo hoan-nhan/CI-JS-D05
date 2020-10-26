@@ -1,0 +1,90 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,700&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 500px;
+    margin: auto;
+    /* font-family: 'Roboto', sans-serif; */
+}
+h1 {
+    height: 90px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 90px;
+    background-color: blueviolet;
+    color: white;
+    margin-bottom: 30px;
+}
+.new-task-form, .new-task-form form {
+    width: 100%;
+    position: relative;
+    padding: auto;
+}
+#new-task {
+    width: 80%;
+    height: 40px;
+    border: 1px solid gray;
+    padding: 10px;
+    margin-top: 20px;
+}
+#btn-submit {
+    font-weight: bold;
+    width: 17%;
+    height: 40px;
+    border: 1px solid gray;
+    cursor: pointer;
+    background-color: #ecdaf7;
+    position: absolute;
+    right: 0;
+    margin-top: 20px;
+}
+#btn-submit:hover {
+    background-color: #ddc2ee;
+}
+.container {
+    font-size: 20px;
+}
+
+/* .task-count {
+    display: flex;
+    justify-content: space-around;
+}
+.pending-task {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.pending-tasks {
+    margin-top: 20px;
+}
+
+ul {
+    width: 100%;
+}
+ul li {
+    padding: 10px 20px;
+    position: relative;
+    list-style-type: none;
+}
+ul li .checkbox {
+    margin-right: 20px;
+    cursor: pointer;
+}
+ul li .btn-cancel {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+ul li:nth-child(odd) {
+    background: #ddc2ee;
+  }
+
+.linethrough {
+    text-decoration: line-through;
+    color: gray;
+    opacity: 0,5;
+}
