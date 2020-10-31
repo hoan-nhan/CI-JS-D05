@@ -1,0 +1,28 @@
+{
+  "name": "CI-JS-D05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoan-nhan/CI-JS-D05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoan-nhan/CI-JS-D05/issues"
+  },
+  "homepage": "https://github.com/hoan-nhan/CI-JS-D05#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^5.3.0",
+    "webpack-cli": "^4.1.0"
+  }
+}

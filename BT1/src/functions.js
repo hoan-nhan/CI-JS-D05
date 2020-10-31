@@ -1,10 +1,4 @@
-let btnSubmit = document.getElementById("btn-submit");
-let del = document.getElementsByClassName("btn-cancel");
-let checkbox = document.getElementsByClassName("checkbox");
-
-// let html = ""
-btnSubmit.addEventListener("click", addFuntion)
-function addFuntion() {
+export function addFuntion() {
     let newTask = document.getElementById("new-task").value;
     console.log(newTask)
     let li = document.createElement("li");
@@ -25,25 +19,20 @@ function addFuntion() {
     attrDel.value = "button";
     delBtn.classList.add("btn-cancel");
     li.appendChild(delBtn);
-    // add new task (cách 1)
+    // add new task 
+
     if (newTask == "") {
         alert("Please add your task")
     } else {
         document.getElementsByClassName("pending-tasks")[0].appendChild(li);
         document.getElementById("new-task").value = "";
     }
-    // add new task (cách 2)
-    // document.getElementsByClassName("pending-tasks")[0].innerHTML = html += `
-    //     <div class="pending-task">
-    //         <input type="checkbox" class="checkbox">
-    //         <p>${newTask}</p>
-    //         <button type="button" class="btn-cancel">X</button>
-    //     </div>`
-    // document.getElementById("new-task").value = "";
 
+    let del = document.getElementsByClassName("btn-cancel");
     for (let i = 0; i < del.length; i++) {
         del[i].addEventListener("click", delFunction)
     }
+    let checkbox = document.getElementsByClassName("checkbox");
     for (let i = 0; i < checkbox.length; i++) {
         checkbox[i].addEventListener("click", checkFunction);
     }
@@ -51,20 +40,12 @@ function addFuntion() {
 
 }
 
-function delFunction(event) {
+export function delFunction(event) {
     let delBtn = event.target;
     delBtn.parentElement.remove();
 }
 
-function checkFunction() {
+export function checkFunction() {
     let checkboxBtn = event.target;
     checkboxBtn.parentElement.classList.toggle("linethrough");
-    // cách 2 cho linethrough
-    // if (checkboxBtn.checked) {
-    //     checkboxBtn.parentElement.classList.add("linethrough");
-    // } else {
-    //     checkboxBtn.parentElement.classList.remove("linethrough");
-    // }
 }
-
-

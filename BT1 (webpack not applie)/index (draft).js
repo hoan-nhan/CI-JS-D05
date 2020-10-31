@@ -36,7 +36,7 @@ function addFuntion() {
         document.getElementById("new-task").value = "";
 
         // pending count at the beg
-        pendingCount = checkbox.length - completedCount;
+        pendingCount ++;
         document.getElementById("to-do-count").innerText = pendingCount;
     }
     // add new task (cách 2)
@@ -47,6 +47,8 @@ function addFuntion() {
     //         <button type="button" class="btn-cancel">X</button>
     //     </div>`
     // document.getElementById("new-task").value = "";
+
+
 
     for (let i = 0; i < del.length; i++) {
         del[i].addEventListener("click", delFunction)
@@ -61,7 +63,14 @@ function addFuntion() {
 function delFunction(event) {
     let delBtn = event.target;
     delBtn.parentElement.remove();
-    console.log(checkbox.length);
+    let thisCheckbox = delBtn.parentElement.getElementsByClassName("checkbox")[0];
+    if (thisCheckbox.checked) {
+        completedCount--;
+    } else {
+        pendingCount--;
+    }
+    document.getElementById("to-do-count").innerText = pendingCount;
+    document.getElementById("completed-count").innerText = completedCount;
 }
 
 function checkFunction() {
