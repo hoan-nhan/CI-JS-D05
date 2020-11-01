@@ -49,14 +49,21 @@ h1 {
     font-size: 20px;
 }
 
-/* .task-count {
+#task-count {
     display: flex;
     justify-content: space-around;
+    margin-top: 20px;
 }
-.pending-task {
-    display: flex;
-    justify-content: space-between;
-} */
+.to-do-count-container, .completed-count-container {
+    background-color: rgb(228, 225, 225);
+    width: 100px;
+    height: 60px;
+    border-radius: 7%;
+}
+#to-do, #completed {
+    text-align: center;
+    margin-top: 7px;
+}
 
 .pending-tasks {
     margin-top: 20px;
